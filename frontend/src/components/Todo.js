@@ -1,14 +1,17 @@
-import {useState} from "react";
+import classes from './Todo.module.css'
 
-function Todo() {
+function Todo(todo) {
 
-    const [description, setDescription] = useState("");
-    const [status, setStatus] = useState("");
+
+    console.log("In Todo: "+ todo)
+    if(todo===undefined) return <div> Fehler </div>;
+
 
     return (
-        <div>
-            <h1>{description}</h1>
-            <h3>{status}</h3>
+        <div className={classes.card}>
+            <h4>{todo.description}</h4>
+            <h5>{todo.status}</h5>
+
         </div>
     );
 }

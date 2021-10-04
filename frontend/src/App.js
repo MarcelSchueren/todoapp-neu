@@ -19,9 +19,10 @@ function App() {
     return (
         <div>
             <div className={classes.boxForThreeStates}>
-                <TodoContainerOpen className={classes.state}/>
-                <TodoContainerInProgress className={classes.state}/>
-                <TodoContainerDone className={classes.state}/>
+                    <TodoContainerOpen todos={todos}/>
+                    <TodoContainerInProgress todos={todos}/>
+                    <TodoContainerDone todos={todos}/>
+
             </div>
             <AddTodo/>
         </div>
