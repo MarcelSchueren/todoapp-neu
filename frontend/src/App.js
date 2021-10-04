@@ -9,9 +9,10 @@ import {useEffect, useState} from "react";
 function App() {
     const [todos, setTodos] = useState([]);
 
-    fetchTodos().then((data) => {
-        setTodos(data)
-    })
+    useEffect(() => {
+        fetchTodos()
+            .then((data) => setTodos(data));
+    }, []);
 
     console.log(todos);
 
